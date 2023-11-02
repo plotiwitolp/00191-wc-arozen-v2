@@ -110,9 +110,10 @@ body {
 .header__logo {
   a {
     display: flex;
+    height: 38px;
     img {
-      max-height: 38px;
-      width: 100%;
+      height: 100%;
+      width: auto;
     }
   }
 }
@@ -705,9 +706,9 @@ table {
     line-height: 16px;
   }
 
-  .row-5 td,
-  .row-8 td,
-  .row-9 td {
+  .row-15 td,
+  .row-28 td,
+  .row-29 td {
     font-size: 14px;
     line-height: 18px;
     border-top: 1px solid #f6cb73;
@@ -727,9 +728,9 @@ table {
     }
   }
 
-  .row-5,
-  .row-8,
-  .row-9 {
+  .row-15,
+  .row-28,
+  .row-29 {
     & .column-8,
     & .column-9,
     & .column-10,
@@ -740,7 +741,7 @@ table {
     }
   }
 
-  .row-9 td {
+  .row-29 td {
     border: none !important;
   }
   .row-2 td,
@@ -1312,7 +1313,6 @@ table {
 .footer__logo {
   display: flex;
   height: 38px;
-  width: 79px;
   img {
     width: 100%;
     height: auto;
@@ -1342,6 +1342,11 @@ table {
 .footer-social__item {
   a {
     display: flex;
+    height: 30px;
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
 }
 .header__btn-nav,

@@ -10,76 +10,117 @@ $home_uri = get_home_url();
         <div class="footer__inner">
 
             <div class="footer__item">
-                <div class="footer__logo"><img src="<?php echo $temp_uri ?>/assets/img/main/logo-79-38.png" alt=""></div>
-                <a href="#">
-                    <div class="btn btn_arrow-yellow">Бесплатный аудит</div>
-                </a>
+                <?php
+                $kartinka = get_field('logotip', 44);
+                if (!empty($kartinka)) : ?>
+                    <div class="footer__logo">
+                        <img src="<?php echo $kartinka['url']; ?>" alt="<?php echo $kartinka['alt']; ?>" />
+                    </div>
+                <?php endif; ?>
+
+                <?php if (get_field('nazvanie_knopki-ssylki', 44)) {  ?>
+                    <a href="<?php the_field('ssylka_knopki-ssylki', 44) ?>">
+                        <div class="btn btn_arrow-yellow"><?php the_field('nazvanie_knopki-ssylki', 44) ?></div>
+                    </a>
+                <?php } ?>
             </div>
 
             <div class="footer__item">
                 <div class="footer__block">
-                    <div class="footer__label">Ссылки</div>
-                    <div class="footer__list">
-                        <ul>
-                            <li><a href="#">Блог</a></li>
-                            <li><a href="#">Кейсы</a></li>
-                            <li><a href="#">Наша команда</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Цены</a></li>
-                            <li><a href="#">Политика конфиденциальности</a></li>
-                        </ul>
-                    </div>
+                    <?php if (get_field('ssylki_nazvanie_lejbla', 44)) {  ?>
+                        <div class="footer__label"><?php the_field('ssylki_nazvanie_lejbla', 44) ?></div>
+                        <div class="footer__list">
+                            <ul>
+                                <?php
+                                if (have_rows('ssylki_spisok', 44)) :
+                                    while (have_rows('ssylki_spisok', 44)) : the_row();
+                                ?>
+                                        <li>
+                                            <a href="<?php the_sub_field('ssylka_punkta', 44); ?>"><?php the_sub_field('nazvanie_punkta', 44); ?></a>
+                                        </li>
+                                <?php
+                                    endwhile;
+                                endif;
+                                ?>
+                            </ul>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
 
 
             <div class="footer__item">
                 <div class="footer__block">
-                    <div class="footer__label">Услуги</div>
-                    <div class="footer__list">
-                        <ul>
-                            <li><a href="#">Страны</a></li>
-                            <li><a href="#">SEO-продвижение сайтов</a></li>
-                            <li><a href="#">Услуги Digital-маркетинга</a></li>
-                            <li><a href="#">Индустрии</a></li>
-                        </ul>
-                    </div>
+                    <?php if (get_field('uslugi_nazvanie_lejbla', 44)) {  ?>
+                        <div class="footer__label"><?php the_field('uslugi_nazvanie_lejbla', 44) ?></div>
+                        <div class="footer__list">
+                            <ul>
+                                <?php
+                                if (have_rows('uslugi_spisok', 44)) :
+                                    while (have_rows('uslugi_spisok', 44)) : the_row();
+                                ?>
+                                        <li>
+                                            <a href="<?php the_sub_field('ssylka_punkta', 44); ?>"><?php the_sub_field('nazvanie_punkta', 44); ?></a>
+                                        </li>
+                                <?php
+                                    endwhile;
+                                endif;
+                                ?>
+                            </ul>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
 
             <div class="footer__item">
+
                 <div class="footer__block">
-                    <div class="footer__label">Контактная информация</div>
-                    <div class="footer__list">
-                        <ul>
-                            <li>Адресс: Austria</li>
-                            <li><a href="mailto:support@wadiv.com">Email: support@wadiv.com</a></li>
-                            <li><a href="tel:+(002) 1111-8710-594">Телефон: +(002) 1111-8710-594</a></li>
-                        </ul>
-                    </div>
+                    <?php if (get_field('kontaktnaya_informacziya_nazvanie_lejbla', 44)) {  ?>
+                        <div class="footer__label"><?php the_field('kontaktnaya_informacziya_nazvanie_lejbla', 44) ?></div>
+                        <div class="footer__list">
+                            <ul>
+                                <?php
+                                if (have_rows('kontaktnaya_informacziya_spisok', 44)) :
+                                    while (have_rows('kontaktnaya_informacziya_spisok', 44)) : the_row();
+                                ?>
+                                        <li>
+                                            <?php if (get_sub_field('ssylka_punkta', 44)) { ?>
+                                                <a href="<?php the_sub_field('ssylka_punkta', 44); ?>">
+                                                    <?php the_sub_field('nazvanie_punkta', 44); ?>
+                                                </a>
+                                            <?php } else { ?>
+                                                <?php the_sub_field('nazvanie_punkta', 44); ?>
+                                            <?php } ?>
+                                        </li>
+                                <?php
+                                    endwhile;
+                                endif;
+                                ?>
+                            </ul>
+                        </div>
+                    <?php } ?>
                 </div>
+
                 <div class="footer-social">
-                    <div class="footer-social__item">
-                        <a href="#">
-                            <img src="<?php echo $temp_uri ?>/assets/img/social/Facebook.png" alt="Facebook">
-                        </a>
-                    </div>
-                    <div class="footer-social__item">
-                        <a href="#">
-                            <img src="<?php echo $temp_uri ?>/assets/img/social/insta.png" alt="insta">
-                        </a>
-                    </div>
-                    <div class="footer-social__item">
-                        <a href="#">
-                            <img src="<?php echo $temp_uri ?>/assets/img/social/linkedin.png" alt="linkedin">
-                        </a>
-                    </div>
-                    <div class="footer-social__item">
-                        <a href="#">
-                            <img src="<?php echo $temp_uri ?>/assets/img/social/tg.png" alt="tg">
-                        </a>
-                    </div>
+                    <?php
+                    if (have_rows('soczseti', 44)) :
+                        while (have_rows('soczseti', 44)) : the_row();
+                    ?>
+                            <div class="footer-social__item">
+                                <a href="<?php the_sub_field('ssylka', 44); ?>">
+                                    <?php
+                                    $kartinka = get_sub_field('ikonka');
+                                    if (!empty($kartinka)) : ?>
+                                        <img src="<?php echo $kartinka['url']; ?>" alt="<?php echo $kartinka['alt']; ?>" />
+                                    <?php endif; ?>
+                                </a>
+                            </div>
+                    <?php
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
+
             </div>
 
         </div>

@@ -122,10 +122,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 38px;
 }
 .header__logo a img {
-  max-height: 38px;
-  width: 100%;
+  height: 100%;
+  width: auto;
 }
 
 .topmenu > ul {
@@ -811,20 +812,20 @@ table tr td {
   font-size: 12px;
   line-height: 16px;
 }
-table .row-5 td,
-table .row-8 td,
-table .row-9 td {
+table .row-15 td,
+table .row-28 td,
+table .row-29 td {
   font-size: 14px;
   line-height: 18px;
   border-top: 1px solid #f6cb73;
   border-bottom: 1px solid #f6cb73;
 }
-table .row-5 td strong::before,
-table .row-5 td em::before,
-table .row-8 td strong::before,
-table .row-8 td em::before,
-table .row-9 td strong::before,
-table .row-9 td em::before {
+table .row-15 td strong::before,
+table .row-15 td em::before,
+table .row-28 td strong::before,
+table .row-28 td em::before,
+table .row-29 td strong::before,
+table .row-29 td em::before {
   content: "";
   width: 8px;
   height: 8px;
@@ -833,26 +834,26 @@ table .row-9 td em::before {
   margin-right: 5px;
   display: inline-block;
 }
-table .row-5 td em::before,
-table .row-8 td em::before,
-table .row-9 td em::before {
+table .row-15 td em::before,
+table .row-28 td em::before,
+table .row-29 td em::before {
   background-color: #f6cb73;
 }
-table .row-5 .column-8, table .row-5 .column-9, table .row-5 .column-10, table .row-5 .column-11, table .row-5 .column-12,
-table .row-8 .column-8,
-table .row-8 .column-9,
-table .row-8 .column-10,
-table .row-8 .column-11,
-table .row-8 .column-12,
-table .row-9 .column-8,
-table .row-9 .column-9,
-table .row-9 .column-10,
-table .row-9 .column-11,
-table .row-9 .column-12 {
+table .row-15 .column-8, table .row-15 .column-9, table .row-15 .column-10, table .row-15 .column-11, table .row-15 .column-12,
+table .row-28 .column-8,
+table .row-28 .column-9,
+table .row-28 .column-10,
+table .row-28 .column-11,
+table .row-28 .column-12,
+table .row-29 .column-8,
+table .row-29 .column-9,
+table .row-29 .column-10,
+table .row-29 .column-11,
+table .row-29 .column-12 {
   border-top: 1px solid #837ede;
   border-bottom: 1px solid #837ede;
 }
-table .row-9 td {
+table .row-29 td {
   border: none !important;
 }
 table .row-2 td,
@@ -1585,7 +1586,6 @@ table .column-8 {
   display: -ms-flexbox;
   display: flex;
   height: 38px;
-  width: 79px;
 }
 .footer__logo img {
   width: 100%;
@@ -1616,6 +1616,11 @@ table .column-8 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 30px;
+}
+.footer-social__item a img {
+  height: 100%;
+  width: auto;
 }
 
 .header__btn-nav,
